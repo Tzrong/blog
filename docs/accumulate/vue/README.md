@@ -12,5 +12,5 @@ title: 目录
 
 ## Vue
 
--   [template 是如何编译的](./vue/1)
--   [父子组件通信问题](./vue/2)
+-   [template 是如何编译的](/accumulate/vue/1.html)
+-   [父子组件通信问题](/accumulate/vue/1.html)

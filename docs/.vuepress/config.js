@@ -36,14 +36,16 @@ module.exports = {
                     path: '/accumulate/vue/',
                     collapsable: true,
                     children: [
-                        {
-                            title: 'vue编译原理',
-                            path: '/accumulate/vue/1',
-                        },
-                        {
-                            title: '父子组件通信',
-                            path: '/accumulate/vue/2',
-                        },
+                        '/accumulate/vue/1',
+                        '/accumulate/vue/2',
+                        // {
+                        //     title: 'vue编译原理',
+                        //     path: '/accumulate/vue/1',
+                        // },
+                        // {
+                        //     title: '父子组件通信',
+                        //     path: '/accumulate/vue/2',
+                        // },
                     ],
                 },
             ],
