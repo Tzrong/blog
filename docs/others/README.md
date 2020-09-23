@@ -4,7 +4,7 @@ sidebar: auto
 sidebarDepth: 2
 ---
 
-::: tip 提示
+::: :tada:
 这个世界不只有眼前的苟且，还有诗和远方。
 :::
 

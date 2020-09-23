@@ -36,28 +36,42 @@ module.exports = {
                     path: '/accumulate/vue/',
                     collapsable: true,
                     children: [
-                        '/accumulate/vue/1',
-                        '/accumulate/vue/2',
-                        // {
-                        //     title: 'vue编译原理',
-                        //     path: '/accumulate/vue/1',
-                        // },
-                        // {
-                        //     title: '父子组件通信',
-                        //     path: '/accumulate/vue/2',
-                        // },
+                        {
+                            title: 'vue编译原理',
+                            path: '/accumulate/vue/1',
+                        },
+                        {
+                            title: '父子组件通信',
+                            path: '/accumulate/vue/2',
+                        },
+                    ],
+                },
+                {
+                    title: 'Css',
+                    path: '/accumulate/css/',
+                    collapsable: true,
+                    children: [
+                        {
+                            title: 'object.fit属性',
+                            path: '/accumulate/css/1',
+                        },
+                        {
+                            title: 'css绘制圆形渐变进度条',
+                            path: '/accumulate/css/2',
+                        },
                     ],
                 },
             ],
         },
+
         sidebarDepth: 2,
         editLinkText: '发现有错误?前往GitHub指正', // 指明编辑功能的文字内容
         smoothScroll: true, // 点击左侧侧边栏,页面滚动效果,smoothScroll 选项来启用页面滚动效果,true为启动,false禁用
     },
-    // plugin: {
-    //     'vuepress-plugin-auto-sidebar': {
-    //         titleMode: 'titlecase', // 标题模式
-    //         collapsable: true, // 设置为true，开启折叠
-    //     },
-    // },
+    plugin: {
+        'vuepress-plugin-auto-sidebar': {
+            // titleMode: 'titlecase', // 标题模式
+            collapsable: true, // 设置为true，开启折叠
+        },
+    },
 };
