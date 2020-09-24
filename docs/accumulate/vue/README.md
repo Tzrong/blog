@@ -14,4 +14,6 @@ title: 目录
 
 -   [template 是如何编译的](/accumulate/vue/1.html)
 -   [父子组件通信问题](/accumulate/vue/2.html)
--   [vue 的数据驱动](/accumulate/vue/3.html)
+-   [vue 中被忽略但却很实用的](/accumulate/vue/3.html)
+-   [element-ui Upload 上传文件](/accumulate/vue/4.html)
+-   [vue+axios 以文件流的形式下载文件](/accumulate/vue/5.html)

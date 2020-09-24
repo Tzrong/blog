@@ -43,6 +43,18 @@ module.exports = {
                             title: '父子组件通信',
                             path: '/accumulate/vue/2',
                         },
+                        {
+                            title: 'vue 中被忽略但却很实用的',
+                            path: '/accumulate/vue/3',
+                        },
+                        {
+                            title: 'element-ui Upload 上传文件',
+                            path: '/accumulate/vue/4',
+                        },
+                        {
+                            title: 'vue+axios 以文件流的形式下载文件',
+                            path: '/accumulate/vue/5',
+                        },
                     ],
                 },
                 {
