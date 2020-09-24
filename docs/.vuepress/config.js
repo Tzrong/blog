@@ -4,7 +4,6 @@ module.exports = {
     // 网站描述
     description: 'April,Personal Website',
     keywords: 'April的博客，April',
-    lastUpdated: '上次更新',
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
         ['link', { rel: 'icon', href: '/images/photo.jpeg' }],
@@ -27,7 +26,7 @@ module.exports = {
             { text: '关于前端', link: '/accumulate/' },
             // { text: '算法题库', link: '/algorithm/' },
             { text: '诗和远方', link: '/others/' },
-            { text: 'github', link: 'https://github.com/AprilTong' },
+            { text: 'github', link: 'https://github.com/AprilTong/blog.git' },
         ],
         sidebar: {
             '/accumulate/': [
@@ -65,7 +64,10 @@ module.exports = {
         },
 
         sidebarDepth: 2,
+        editLinks: true, // 默认是false，设置为true来启用
         editLinkText: '发现有错误?前往GitHub指正', // 指明编辑功能的文字内容
+        docsRepo: 'https://github.com/AprilTong/blog',
+        lastUpdated: '上次更新',
         smoothScroll: true, // 点击左侧侧边栏,页面滚动效果,smoothScroll 选项来启用页面滚动效果,true为启动,false禁用
     },
     plugin: {

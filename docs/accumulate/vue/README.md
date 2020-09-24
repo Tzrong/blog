@@ -13,4 +13,5 @@ title: 目录
 ## Vue
 
 -   [template 是如何编译的](/accumulate/vue/1.html)
--   [父子组件通信问题](/accumulate/vue/1.html)
+-   [父子组件通信问题](/accumulate/vue/2.html)
+-   [vue 的数据驱动](/accumulate/vue/3.html)
