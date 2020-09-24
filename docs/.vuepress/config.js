@@ -24,7 +24,7 @@ module.exports = {
             // 导航栏配置
             { text: 'Home', link: '/' },
             { text: '关于前端', link: '/accumulate/' },
-            // { text: '算法题库', link: '/algorithm/' },
+            { text: 'JavaScript练习', link: '/algorithm/' },
             { text: '诗和远方', link: '/others/' },
             { text: 'github', link: 'https://github.com/AprilTong/blog.git' },
         ],
@@ -62,6 +62,10 @@ module.exports = {
                     path: '/accumulate/css/',
                     collapsable: true,
                     children: [
+                        {
+                            title: '基本使用概念',
+                            path: '/accumulate/css/common',
+                        },
                         {
                             title: 'object.fit属性',
                             path: '/accumulate/css/1',
