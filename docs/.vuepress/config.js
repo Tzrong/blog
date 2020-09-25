@@ -31,6 +31,36 @@ module.exports = {
         sidebar: {
             '/accumulate/': [
                 {
+                    title: 'Css',
+                    path: '/accumulate/css/',
+                    collapsable: true,
+                    children: [
+                        {
+                            title: '基本使用概念',
+                            path: '/accumulate/css/common',
+                        },
+                        {
+                            title: 'object.fit属性',
+                            path: '/accumulate/css/1',
+                        },
+                        {
+                            title: 'css绘制圆形渐变进度条',
+                            path: '/accumulate/css/2',
+                        },
+                    ],
+                },
+                {
+                    title: 'javaScript',
+                    path: '/accumulate/js/',
+                    collapsable: true,
+                    children: [
+                        {
+                            title: '跨域了解',
+                            path: '/accumulate/js/1',
+                        },
+                    ],
+                },
+                {
                     title: 'Vue',
                     path: '/accumulate/vue/',
                     collapsable: true,
@@ -54,25 +84,6 @@ module.exports = {
                         {
                             title: 'vue+axios 以文件流的形式下载文件',
                             path: '/accumulate/vue/5',
-                        },
-                    ],
-                },
-                {
-                    title: 'Css',
-                    path: '/accumulate/css/',
-                    collapsable: true,
-                    children: [
-                        {
-                            title: '基本使用概念',
-                            path: '/accumulate/css/common',
-                        },
-                        {
-                            title: 'object.fit属性',
-                            path: '/accumulate/css/1',
-                        },
-                        {
-                            title: 'css绘制圆形渐变进度条',
-                            path: '/accumulate/css/2',
                         },
                     ],
                 },
