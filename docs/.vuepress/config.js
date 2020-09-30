@@ -47,6 +47,10 @@ module.exports = {
                             title: 'css绘制圆形渐变进度条',
                             path: '/accumulate/css/2',
                         },
+                        {
+                            title: '媒体查询',
+                            path: '/accumulate/css/3',
+                        },
                     ],
                 },
                 {
