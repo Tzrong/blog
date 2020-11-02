@@ -89,6 +89,10 @@ module.exports = {
                             title: 'vue+axios 以文件流的形式下载文件',
                             path: '/accumulate/vue/5',
                         },
+                        {
+                            title: 'elemrnt-ui 中 el-table 多列排序',
+                            path: '/accumulate/vue/6',
+                        },
                     ],
                 },
             ],

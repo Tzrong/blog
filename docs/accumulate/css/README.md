@@ -17,3 +17,4 @@ title: 目录
 -   [css 绘制圆形渐变进度条](/accumulate/css/2.html)
 -   [媒体查询](/accumulate/css/3.html)
 -   [text-align 无法居中](/accumulate/css/4.html)
+-   [火狐浏览器 css 深度选择器失效](/accumulate/css/5.html)
