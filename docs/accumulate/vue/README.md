@@ -18,3 +18,5 @@ title: 目录
 -   [element-ui Upload 上传文件](/accumulate/vue/4.html)
 -   [vue+axios 以文件流的形式下载文件](/accumulate/vue/5.html)
 -   [elemrnt-ui 中 el-table 多列排序](/accumulate/vue/6.html)
+-   [vue 转换 es7 为 es5 语法](/accumulate/vue/7.html)
+-   [结合 ts 的 vue 递归组件写法](/accumulate/vue/8.html)

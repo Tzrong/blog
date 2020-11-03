@@ -90,8 +90,16 @@ module.exports = {
                             path: '/accumulate/vue/5',
                         },
                         {
-                            title: 'elemrnt-ui 中 el-table 多列排序',
+                            title: 'element-ui 中 el-table 多列排序',
                             path: '/accumulate/vue/6',
+                        },
+                        {
+                            title: 'vue 转换 es7 为 es5 语法',
+                            path: '/accumulate/vue/7',
+                        },
+                        {
+                            title: '结合ts的vue递归组件写法',
+                            path: '/accumulate/vue/8',
                         },
                     ],
                 },
