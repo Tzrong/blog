@@ -123,3 +123,66 @@ const removeRepeat = (str) => {
     return result.join('');
 };
 ```
+
+## 树形结构查找符合条件的元素
+
+```js
+const arr = [
+    {
+        label: '1',
+        children: [
+            {
+                label: '1-1',
+            },
+            {
+                label: '1-2',
+            },
+        ],
+    },
+    {
+        label: '2',
+        children: [
+            {
+                label: '2-1',
+            },
+            {
+                label: '2-2',
+            },
+        ],
+    },
+];
+// 方法一
+function findTallyOne(arr, value) {
+    for (let item of arr || []) {
+        if (item.label === value) return item;
+        const result = findTallyOne(item.children, value);
+        if (result) return result;
+    }
+}
+// 方法二
+function findTallyOne2(arr, value) {
+    const temp_data = [...arr];
+    while (temp_data.length) {
+        const result = temp_data.shift();
+        if (result.label === value) return result;
+        result.children && temp_data.push(...result.children);
+    }
+}
+```
+
+## 数组常用方法
+
+-   生成[1, 100]这样的数组
+
+```js
+let arr = new Array(100).fill(0).map((item, index) => index + 1);
+```
+
+-   数组解构赋值
+
+```js
+// 交换变量
+let a = 1;
+let b = 2;
+[a, b] = [b, a]; // a为1:b为2
+```
