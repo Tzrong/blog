@@ -186,3 +186,62 @@ let a = 1;
 let b = 2;
 [a, b] = [b, a]; // a为1:b为2
 ```
+
+-   数组浅拷贝
+
+```js
+const arr = [1, 2, 3];
+const arrClone = [...arr];
+arr.slice(0, arr.length) / Arror.from(arr);
+```
+
+-   数组合并
+
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr = [...arr1, ...arr2];
+arr1.concat(arr2);
+```
+
+-   数组取交集
+
+```js
+const a = [0, 1, 2, 3, 4, 5];
+const b = [3, 4, 5, 6, 7, 8];
+const duplicatedValues = [...new Set(a)].filter((item) => item.includes(item));
+```
+
+-   数组取差集
+
+```js
+const a = [0, 1, 2, 3, 4, 5];
+const b = [3, 4, 5, 6, 7, 8];
+const diffValues = [...new Set([...a, ...b])].filter((item) => !b.includes(item) || !a.includes(item));
+```
+
+-   数组转对象
+
+```js
+const arr = [1, 2, 3, 4];
+const newObj = { ...arr }; // {0: 1, 1: 2, 3: 3, 3: 4}
+// 使用Array.from()将类数组转化为数组
+const obj = { 0: 0, 1: 1, 2: 2, length: 3 };
+const newArr = Array.from(obj); // [0, 1,2]
+```
+
+-   巧用 reduce
+
+```js
+const arr = [1, 2, 3, 4, 5];
+
+// 方法1  遍历了两次，效率低
+const value = arr.filter((item) => item % 2 === 0).map((item) => ({ value: item }));
+
+// 方法1  一次遍历，效率高
+const value = arr.reduce((prev, curr) => {
+    return curr % 2 === 0 ? [...prev, curr] : prev;
+}, []);
+```
+
+-   常见的深浅拷贝方法
