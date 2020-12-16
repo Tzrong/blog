@@ -244,4 +244,34 @@ const value = arr.reduce((prev, curr) => {
 }, []);
 ```
 
--   常见的深浅拷贝方法
+## 模拟实现数组的 splice 方法
+
+-   数组的 splice 方法 mdn 介绍
+    splice()方法通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容，词方法会改变原数组，
+    使用：array.splice(start, deleteCount, item1, item2, ...)
+
+    **接受三个参数：**
+
+    1.  start: 指定修改的开始位置(从 0 开始)，若开始数组长度，则从数组末尾开始添加内容，若为负值，则表示从数组末位开始的第几位，如果负数的绝对值，则表示开始位置为第 0 位
+    2.  deleteCount 可选： 整数，表示要移除的数组元素的个数
+        如果 deleteCount 大于 start 知乎的元素总数，则 start 之后的元素都将被删除；
+        如果 deleteCount 被省略，start 之后数组的所有元素都会被删除
+        如果 deleteCount 是 0 或者负数，则不移除元素
+    3.  item1， item2，...可选，表示要添加进数组的元素，如果不指定，则 splice()将只删除数组元素
+
+    **返回值**
+
+    由被删除的元素组成的一个数组
+
+```js
+Array.protoytpe.mySplice = function(index, cutNum, ...args) {
+    const arr = this;
+    const leftArr = arguments.length === 0 ? [] : arr.slice(0, index);
+    const rightArr = arguments.length === 1 ? [] : arr.slice(index + (cutNum || 0));
+    const changeArr = [...leftArr, ...args, ...rightArr];
+    const result = arguments.length === 1 ? arr.splice(index) : arr.slice(index, index + cutNum);
+    changeArr.forEach((val, index) => (this[index] = val));
+    this.length = changeArr.length;
+    return result;
+};
+```

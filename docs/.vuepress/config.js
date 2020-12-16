@@ -51,6 +51,10 @@ module.exports = {
                             title: '媒体查询',
                             path: '/accumulate/css/3',
                         },
+                        {
+                            title: '文本溢出显示省略号',
+                            path: '/accumulate/css/6',
+                        },
                     ],
                 },
                 {
