@@ -116,10 +116,10 @@ module.exports = {
         lastUpdated: '上次更新',
         smoothScroll: true, // 点击左侧侧边栏,页面滚动效果,smoothScroll 选项来启用页面滚动效果,true为启动,false禁用
     },
-    // plugin: {
-    //     'vuepress-plugin-auto-sidebar': {
-    //         // titleMode: 'titlecase', // 标题模式
-    //         collapsable: true, // 设置为true，开启折叠
-    //     },
-    // },
+    plugin: {
+        'vuepress-plugin-auto-sidebar': {
+            // titleMode: 'titlecase', // 标题模式
+            collapsable: true, // 设置为true，开启折叠
+        },
+    },
 };

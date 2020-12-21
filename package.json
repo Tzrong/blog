@@ -13,7 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vuepress": "^1.0.0"
+    "vuepress": "^1.0.0",
+    "vuepress-sidebar-atuo": "^1.0.3"
   },
   "devDependencies": {
     "vuepress-plugin-auto-sidebar": "^1.5.0"
