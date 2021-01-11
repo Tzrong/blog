@@ -12,12 +12,12 @@ sidebarDepth: 2
 
 ```js
 Array.prototype.myMap = function(fn) {
-    let result = [];
+    let result = []
     for (let i = 0; i < this.length; i++) {
-        result.push(fn(this[i], i, this));
+        result.push(fn(this[i], i, this))
     }
-    return result;
-};
+    return result
+}
 ```
 
 方法二：利用 reduce 实现数组的 map 方法
@@ -25,10 +25,10 @@ Array.prototype.myMap = function(fn) {
 ```js
 Array.prototype.myMap2 = function(fn) {
     return this.reduce((acc, cur, index) => {
-        acc.push(fn(cur, index, this));
-        return acc;
-    }, []);
-};
+        acc.push(fn(cur, index, this))
+        return acc
+    }, [])
+}
 ```
 
 ## 实现一个函数，每次调用 foo 会返回 foo 被访问次数，foo.clear()归零
@@ -36,20 +36,20 @@ Array.prototype.myMap2 = function(fn) {
 ```js
 function foo() {
     if (!foo.count) {
-        foo.count = 1;
+        foo.count = 1
     } else {
-        foo.count++;
+        foo.count++
     }
-    return foo.count;
+    return foo.count
 }
 foo.clear = function() {
-    this.count = 0;
-    return this.count;
-};
-foo(); // 1
-foo(); // 2
-foo(); // 3
-foo.clear(); // 0
+    this.count = 0
+    return this.count
+}
+foo() // 1
+foo() // 2
+foo() // 3
+foo.clear() // 0
 ```
 
 ## 整数反转
@@ -58,8 +58,8 @@ foo.clear(); // 0
 
 ```js
 let reverse = function(x) {
-    if (isNaN(x)) return;
-    let isSign = Math.sign(x);
+    if (isNaN(x)) return
+    let isSign = Math.sign(x)
     let result =
         Number(
             Math.abs(x)
@@ -67,15 +67,15 @@ let reverse = function(x) {
                 .split('')
                 .reverse()
                 .join('')
-        ) * isSign;
+        ) * isSign
     if (result < -Math.pow(2, 31) || result > Math.pow(2, 31) - 1) {
-        return 0;
+        return 0
     }
-    return result;
-};
-reverse(123); // 321
-reverse(-123); // -321
-reverse(120); //21
+    return result
+}
+reverse(123) // 321
+reverse(-123) // -321
+reverse(120) //21
 ```
 
 ## 判断变量是否相等
@@ -112,16 +112,16 @@ JavaScript 提供三种不同的值比较操作
 
 ```js
 const removeRepeat = (str) => {
-    const result = [];
+    const result = []
     for (cur of str) {
-        let pre = result.pop();
+        let pre = result.pop()
         if (pre !== cur) {
-            pre && result.push(pre);
-            result.push(cur);
+            pre && result.push(pre)
+            result.push(cur)
         }
     }
-    return result.join('');
-};
+    return result.join('')
+}
 ```
 
 ## 树形结构查找符合条件的元素
@@ -150,22 +150,22 @@ const arr = [
             },
         ],
     },
-];
+]
 // 方法一
 function findTallyOne(arr, value) {
     for (let item of arr || []) {
-        if (item.label === value) return item;
-        const result = findTallyOne(item.children, value);
-        if (result) return result;
+        if (item.label === value) return item
+        const result = findTallyOne(item.children, value)
+        if (result) return result
     }
 }
 // 方法二
 function findTallyOne2(arr, value) {
-    const temp_data = [...arr];
+    const temp_data = [...arr]
     while (temp_data.length) {
-        const result = temp_data.shift();
-        if (result.label === value) return result;
-        result.children && temp_data.push(...result.children);
+        const result = temp_data.shift()
+        if (result.label === value) return result
+        result.children && temp_data.push(...result.children)
     }
 }
 ```
@@ -175,73 +175,73 @@ function findTallyOne2(arr, value) {
 -   生成[1, 100]这样的数组
 
 ```js
-let arr = new Array(100).fill(0).map((item, index) => index + 1);
+let arr = new Array(100).fill(0).map((item, index) => index + 1)
 ```
 
 -   数组解构赋值
 
 ```js
 // 交换变量
-let a = 1;
-let b = 2;
-[a, b] = [b, a]; // a为1:b为2
+let a = 1
+let b = 2
+;[a, b] = [b, a] // a为1:b为2
 ```
 
 -   数组浅拷贝
 
 ```js
-const arr = [1, 2, 3];
-const arrClone = [...arr];
-arr.slice(0, arr.length) / Arror.from(arr);
+const arr = [1, 2, 3]
+const arrClone = [...arr]
+arr.slice(0, arr.length) / Arror.from(arr)
 ```
 
 -   数组合并
 
 ```js
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const arr = [...arr1, ...arr2];
-arr1.concat(arr2);
+const arr1 = [1, 2, 3]
+const arr2 = [4, 5, 6]
+const arr = [...arr1, ...arr2]
+arr1.concat(arr2)
 ```
 
 -   数组取交集
 
 ```js
-const a = [0, 1, 2, 3, 4, 5];
-const b = [3, 4, 5, 6, 7, 8];
-const duplicatedValues = [...new Set(a)].filter((item) => item.includes(item));
+const a = [0, 1, 2, 3, 4, 5]
+const b = [3, 4, 5, 6, 7, 8]
+const duplicatedValues = [...new Set(a)].filter((item) => item.includes(item))
 ```
 
 -   数组取差集
 
 ```js
-const a = [0, 1, 2, 3, 4, 5];
-const b = [3, 4, 5, 6, 7, 8];
-const diffValues = [...new Set([...a, ...b])].filter((item) => !b.includes(item) || !a.includes(item));
+const a = [0, 1, 2, 3, 4, 5]
+const b = [3, 4, 5, 6, 7, 8]
+const diffValues = [...new Set([...a, ...b])].filter((item) => !b.includes(item) || !a.includes(item))
 ```
 
 -   数组转对象
 
 ```js
-const arr = [1, 2, 3, 4];
-const newObj = { ...arr }; // {0: 1, 1: 2, 3: 3, 3: 4}
+const arr = [1, 2, 3, 4]
+const newObj = { ...arr } // {0: 1, 1: 2, 3: 3, 3: 4}
 // 使用Array.from()将类数组转化为数组
-const obj = { 0: 0, 1: 1, 2: 2, length: 3 };
-const newArr = Array.from(obj); // [0, 1,2]
+const obj = { 0: 0, 1: 1, 2: 2, length: 3 }
+const newArr = Array.from(obj) // [0, 1,2]
 ```
 
 -   巧用 reduce
 
 ```js
-const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5]
 
 // 方法1  遍历了两次，效率低
-const value = arr.filter((item) => item % 2 === 0).map((item) => ({ value: item }));
+const value = arr.filter((item) => item % 2 === 0).map((item) => ({ value: item }))
 
 // 方法1  一次遍历，效率高
 const value = arr.reduce((prev, curr) => {
-    return curr % 2 === 0 ? [...prev, curr] : prev;
-}, []);
+    return curr % 2 === 0 ? [...prev, curr] : prev
+}, [])
 ```
 
 ## 模拟实现数组的 splice 方法
@@ -265,13 +265,29 @@ const value = arr.reduce((prev, curr) => {
 
 ```js
 Array.protoytpe.mySplice = function(index, cutNum, ...args) {
-    const arr = this;
-    const leftArr = arguments.length === 0 ? [] : arr.slice(0, index);
-    const rightArr = arguments.length === 1 ? [] : arr.slice(index + (cutNum || 0));
-    const changeArr = [...leftArr, ...args, ...rightArr];
-    const result = arguments.length === 1 ? arr.splice(index) : arr.slice(index, index + cutNum);
-    changeArr.forEach((val, index) => (this[index] = val));
-    this.length = changeArr.length;
-    return result;
-};
+    const arr = this
+    const leftArr = arguments.length === 0 ? [] : arr.slice(0, index)
+    const rightArr = arguments.length === 1 ? [] : arr.slice(index + (cutNum || 0))
+    const changeArr = [...leftArr, ...args, ...rightArr]
+    const result = arguments.length === 1 ? arr.splice(index) : arr.slice(index, index + cutNum)
+    changeArr.forEach((val, index) => (this[index] = val))
+    this.length = changeArr.length
+    return result
+}
+```
+
+## 创建一个具有 m 行和 n 列为零的二维数组
+
+```js
+function zeroArray(m, n) {
+    let newArray = []
+    for (let i = 0; i < m; i++) {
+        let row = []
+        for (let j = 0; j < n; j++) {
+            row.push(0)
+        }
+        newArray.push(row)
+    }
+    return newArray
+}
 ```
