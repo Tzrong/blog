@@ -105,6 +105,10 @@ module.exports = {
                             title: '结合ts的vue递归组件写法',
                             path: '/accumulate/vue/8',
                         },
+                        {
+                            title: 'vuex存储和本地存储的区别',
+                            path: '/accumulate/vue/9',
+                        },
                     ],
                 },
             ],
@@ -122,4 +126,4 @@ module.exports = {
             collapsable: true, // 设置为true，开启折叠
         },
     },
-};
+}
