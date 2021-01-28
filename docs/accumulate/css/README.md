@@ -19,3 +19,4 @@ title: 目录
 -   [text-align 无法居中](/accumulate/css/4.html)
 -   [火狐浏览器 css 深度选择器失效](/accumulate/css/5.html)
 -   [文本溢出显示省略号](/accumulate/css/6.html)
+-   [css 实现全站中文简繁切换](/accumulate/css/7.html)

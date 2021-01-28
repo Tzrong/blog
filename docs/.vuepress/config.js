@@ -55,6 +55,10 @@ module.exports = {
                             title: '文本溢出显示省略号',
                             path: '/accumulate/css/6',
                         },
+                        {
+                            title: 'CSS实现全站中文简繁转换',
+                            path: '/accumulate/css/7',
+                        },
                     ],
                 },
                 {
