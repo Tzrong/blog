@@ -70,6 +70,14 @@ module.exports = {
                             title: '跨域了解',
                             path: '/accumulate/js/1',
                         },
+                        {
+                            title: 'js数据类型',
+                            path: '/accumulate/js/2',
+                        },
+                        {
+                            title: '事件触发一次',
+                            path: '/accumulate/js/3',
+                        },
                     ],
                 },
                 {
