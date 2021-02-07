@@ -78,6 +78,10 @@ module.exports = {
                             title: '事件触发一次',
                             path: '/accumulate/js/3',
                         },
+                        {
+                            title: '获取数组中的最大值和最小值',
+                            path: '/accumulate/js/4',
+                        },
                     ],
                 },
                 {
