@@ -127,6 +127,17 @@ module.exports = {
                         },
                     ],
                 },
+                {
+                    title: 'Webpack',
+                    path: '/accumulate/webpack/',
+                    collapsable: true,
+                    children: [
+                        {
+                            title: 'webpack 中的 hash、chunkhash、contenthash 区别',
+                            path: '/accumulate/webpack/1',
+                        },
+                    ],
+                },
             ],
         },
         sidebarDepth: 2,
