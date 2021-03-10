@@ -59,6 +59,10 @@ module.exports = {
                             title: 'CSS实现全站中文简繁转换',
                             path: '/accumulate/css/7',
                         },
+                        {
+                            title: 'autofoucs属性学习',
+                            path: '/accumulate/css/8',
+                        },
                     ],
                 },
                 {

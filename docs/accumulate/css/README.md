@@ -20,3 +20,4 @@ title: 目录
 -   [火狐浏览器 css 深度选择器失效](/accumulate/css/5.html)
 -   [文本溢出显示省略号](/accumulate/css/6.html)
 -   [css 实现全站中文简繁切换](/accumulate/css/7.html)
+-   [autofocus 属性](/accumulate/css/8.html)
