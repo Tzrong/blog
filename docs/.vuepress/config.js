@@ -1,4 +1,4 @@
-// const path = require('path')
+const path = require('path')
 module.exports = {
     // 网站标题
     title: 'april的主页',
@@ -157,5 +157,31 @@ module.exports = {
             // titleMode: 'titlecase', // 标题模式
             collapsable: true, // 设置为true，开启折叠
         },
+    },
+    configureWebpack: () => {
+        const NODE_ENV = process.env.NODE_ENV
+        //判断是否是生产环境
+        if (NODE_ENV === 'production') {
+            return {
+                output: {
+                    publicPath: 'https://cdn.jsdelivr.net/gh/AprilTong/blog@gh-pages/',
+                },
+                resolve: {
+                    //配置路径别名
+                    alias: {
+                        public: path.resolve(__dirname, './public'),
+                    },
+                },
+            }
+        } else {
+            return {
+                resolve: {
+                    //配置路径别名
+                    alias: {
+                        public: path.resolve(__dirname, './public'),
+                    },
+                },
+            }
+        }
     },
 }
